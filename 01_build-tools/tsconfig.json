@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "rootDir": "src", //take every TypeScript file with the extension .ts from /src folder
+    "outDir": "build", //compile them outputting the result in the /build folder
+    "target": "es6",
+    "sourceMap": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true
+  }
+}

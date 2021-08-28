@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAA,EAAE,GAAG,EAAE,CAAC,CAAC,iBAAiB;AAC1B,EAAE,GAAG,EAAE,CAAC","sources":["webpack://code/./src/index.ts"],"sourcesContent":["f1 = f2; // DOESNT COMPILE\nf2 = f1;\n"],"names":[],"sourceRoot":""}
