@@ -128,78 +128,10 @@ namespace classVariables {
   console.log(myClass3Same.p2); // prints 2
 
 
-
   class PrivateConstructor {
     private constructor() {
     }
   }
-  // const pc = new PrivateConstructor(); // Does not compile
-
-  class SingletonClass {
-    private static instance: SingletonClass;
-    private constructor() {
-      SingletonClass.instance = new SingletonClass();
-    }
-    public static GetInstance(): SingletonClass {
-      return SingletonClass.instance;
-    }
-  }
-  const singletonClass = SingletonClass.GetInstance();
-
-  interface ObjectDefinition {
-    m1: string;
-    funct1: () => void;
-  }
-  let ajax: any;
-  const funct1 = () => { };
-  ajax.then((response: any) => {
-    const r = response as ObjectDefinition;
-    r.funct1 = funct1;
-    return r;
-  });
-
-  class ObjectDefinitionClass implements ObjectDefinition {
-    public m1: string;
-    public funct1(): void { }
-    constructor(param1: string) {
-      this.m1 = param1;
-    }
-  }
-  ajax.then((response: any) => {
-    const r = response as ObjectDefinition;
-    return new ObjectDefinitionClass(r.m1);
-  });
-
-  interface Model {
-    m1: string;
-  }
-  interface Funct {
-    funct1: () => void;
-  }
-  class ObjectDefinitionClass2 implements Model, Funct {
-    public m1: string;
-    public funct1(): void { }
-    constructor(param1: Model) {
-      this.m1 = param1.m1;
-    }
-  }
-  ajax.then((response: any) => {
-    const r = response as Model;
-    return new ObjectDefinitionClass2(r);
-  });
-
-
-  function createObj(m1: string): ObjectDefinitionClass {
-    return {
-      m1: m1,
-      funct1: () => { }
-    }
-  }
-  ajax.then((response: any) => {
-    const r = response as Model;
-    return createObj(r.m1);
-  });
-
-  const forTesting = new ObjectDefinitionClass("1");
-  forTesting.funct1 = jest.fn();
+  const pc = new PrivateConstructor(); // Does not compile  
+  
 }
